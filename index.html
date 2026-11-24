@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#121411" />
+    <title>Apex Garage · 私人车库</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <a class="identity" href="./" aria-label="Apex Garage 首页"
+          ><span class="mark"><i></i><i></i><i></i></span
+          ><strong>APEX<span>GARAGE</span></strong></a
+        >
+        <nav>
+          <button id="showroom" class="current">展车空间</button
+          ><button id="archive">车辆档案</button>
+        </nav>
+        <button class="help" id="help" aria-label="操作指南">?</button>
+      </div>
+    </header>
+    <main>
+      <div class="heading">
+        <div>
+          <div class="kicker"><i></i> PRIVATE MOTOR COLLECTION</div>
+          <h1>私人车库<span>.</span></h1>
+        </div>
+        <div class="counter"><span class="dot"></span> GARAGE ONLINE</div>
+      </div>
+      <div class="workspace">
+        <section class="stage" aria-label="三维车辆展示">
+          <div
+            id="viewport"
+            tabindex="0"
+            aria-label="拖动旋转，点击车身放大，方向键环视"
+          ></div>
+          <div class="stage-title">
+            <small id="brand">PORSCHE</small>
+            <h2 id="model">Mission S</h2>
+          </div>
+          <span class="bay" id="bay">BAY / 01</span
+          ><button
+            id="expand"
+            class="square"
+            aria-label="全屏查看"
+            title="全屏查看"
+          ></button>
+          <div class="stage-foot">
+            <span class="gesture"
+              ><b>360°</b><span id="hint">拖动旋转 · 点击查看细节</span></span
+            >
+            <div class="tools">
+              <button id="minus" aria-label="缩小">−</button
+              ><button id="plus" aria-label="放大">+</button
+              ><button id="reset" aria-label="复位视角"></button>
+            </div>
+          </div>
+          <div id="load" role="status">正在装载模型…</div>
+        </section>
+        <aside>
+          <div class="panel-title">
+            <i data-ic="sliders"></i>
+            <h2>展车控制</h2>
+          </div>
+          <div class="group">
+            <h3>观察视角</h3>
+            <div class="seg">
+              <button id="outside" aria-pressed="true">
+                <i data-ic="car"></i>外观</button
+              ><button id="inside" aria-pressed="false">
+                <i data-ic="wheel"></i>驾驶舱
+              </button>
+            </div>
+          </div>
+          <div class="group">
+            <h3>车辆交互</h3>
+            <button class="row" id="lights" role="switch" aria-checked="false">
+              <i data-ic="light"></i>车灯<span class="switch"></span></button
+            ><button class="row" id="doors" role="switch" aria-checked="false">
+              <i data-ic="door"></i>车门<span class="switch"></span>
+            </button>
+          </div>
+          <div class="group finish">
+            <div class="subhead">
+              <h3>车身配色</h3>
+              <small id="paintname"></small>
+            </div>
+            <div id="swatches"></div>
+          </div>
+          <button class="detail-link" id="detail">
+            查看车辆档案 <span>↗</span>
+          </button>
+        </aside>
+      </div>
+      <section class="collection">
+        <div class="collection-title">
+          <h2>我的藏车 <small>03</small></h2>
+          <span>COLLECTION</span>
+        </div>
+        <div class="cards" id="cards"></div>
+      </section>
+    </main>
+    <dialog id="dialog">
+      <div class="dialog-top">
+        <small id="dialogTag">VEHICLE FILE</small
+        ><button id="close" aria-label="关闭">×</button>
+      </div>
+      <div id="dialogBody"></div>
+    </dialog>
+    <script type="module" src="./assets/garage.js"></script>
+  </body>
+</html>
