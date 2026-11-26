@@ -50,6 +50,10 @@
             aria-label="全屏查看"
             title="全屏查看"
           ></button>
+          <div id="part-dock" hidden>
+            <select id="part-select" aria-label="选择拆件"></select>
+            <button id="exit-parts" type="button">返回整车</button>
+          </div>
           <div class="stage-foot">
             <span class="gesture"
               ><b>360°</b><span id="hint">拖动旋转 · 点击查看细节</span></span
@@ -74,7 +78,7 @@
                 <i data-ic="car"></i>外观</button
               ><button id="inside" aria-pressed="false">
                 <i data-ic="wheel"></i>驾驶舱
-              </button>
+              </button><button id="parts" aria-pressed="false" disabled>拆件</button>
             </div>
           </div>
           <div class="group">

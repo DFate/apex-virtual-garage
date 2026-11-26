@@ -875,3 +875,37 @@ dialog img {
     inset: -6px;
   }
 }
+
+#part-dock {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 56px;
+  max-width: calc(100% - 24px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid #67705a;
+  border-radius: 7px;
+  background: #1a1d19f5;
+  white-space: nowrap;
+}
+#part-dock[hidden], .seg button[hidden] { display: none; }
+#part-dock select, #exit-parts {
+  font: inherit;
+  color: var(--ink);
+  background: #282e23;
+  border: 0;
+  border-radius: 4px;
+  padding: 0 10px;
+  min-height: 40px;
+}
+#exit-parts { color: var(--accent); }
+.inspecting .stage-title, .inspecting .bay { display: none; }
+.seg button:disabled, .row:disabled { opacity: .45; }
+@media (max-width:720px) {
+  .stage.inspecting { height: clamp(390px, 100vw, 490px); }
+  #part-dock { bottom: 60px; }
+}
